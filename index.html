@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ProFranceAuto — Сервіс Renault, Peugeot, Citroën</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- FontAwesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      scroll-behavior: smooth;
+    }
+    /* Hero */
+    #hero {
+      height: 80vh;
+      background-color:#2832c2 ;
+    }
+    /* Приховуємо французьку версію за замовчуванням */
+    .lang-fr { display: none; }
+
+    .time{
+text-align: center;
+
+    }
+    .discount-banner {
+      background-color: #FF6347;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+  </style>
+</head>
+<body>
+   
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#">ProFranceAuto</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="#about"><span class="lang-ua">Про нас</span><span class="lang-fr">À propos</span></a></li>
+        <li class="nav-item"><a class="nav-link" href="#services"><span class="lang-ua">Послуги</span><span class="lang-fr">Services</span></a></li>
+        <li class="nav-item"><a class="nav-link" href="#why-us"><span class="lang-ua">Чому ми</span><span class="lang-fr">Pourquoi nous</span></a></li>
+        <li class="nav-item"><a class="nav-link" href="#location"><span class="lang-ua">Контакти</span><span class="lang-fr">Contacts</span></a></li>
+      </ul>
+      <div class="d-flex ms-3">
+        <button class="btn btn-light btn-sm me-1" onclick="switchLang('ua')">UA</button>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+<div id="discount-banner">
+    Скидка -15% на першу послугу до кінця місяця! Не упустіть шанс!
+  </div>
+<!-- Hero -->
+<section  id="hero" class=" banner bg-[#9B870C] d-flex align-items-center justify-content-center text-center text-white background-colour-#2832c2">
+  
+  <div class="container">
+    <h1 class="display-4 fw-bold">
+      <span class="lang-ua">Професійний сервіс французьких авто</span>
+      <span class="lang-fr">Service professionnel pour voitures françaises</span>
+    </h1>
+    <p class="lead my-4">
+      <span class="lang-ua">Renault, Peugeot, Citroën в Оболоні</span>
+      <span class="lang-fr">Renault, Peugeot, Citroën à Obolon</span>
+    </p>
+    <button class="btn btn-danger btn-lg" data-bs-toggle="modal" data-bs-target="#callModal" data-bs-target="#callModal">
+      <span class="lang-ua">Замовити дзвінок</span>
+      <span class="lang-fr">Commander un appel</span>
+    </button>
+  </div>
+</section>
+
+<!-- About -->
+<section id="about" class="py-5">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <h2 class="fw-bold">
+          <span class="lang-ua">Наша команда</span>
+          <span class="lang-fr">Notre équipe</span>
+        </h2>
+        <p>
+          <span class="lang-ua">
+            Команда сертифікованих спеціалістів з  20 річним досвідом обслуговує автомобілі на Оболоні, вул. Полярна 19, бокс 3. Ми використовуємо сучасне обладнання та оригінальні запчастини.
+          </span>
+          <span class="lang-fr">
+            Une équipe de spécialistes certifiés avec de nombreuses années d’expérience vous accueille à Obolon, rue Poliarna 19, box 3. Nous utilisons des équipements modernes et des pièces d’origine.
+          </span>
+        </p>
+      </div>
+      <div class="col-md-6 text-center">
+        <i class="fas fa-tools fa-5x text-primary"></i>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="success-stats" class="py-5 text-center bg-light">
+    <div class="container">
+      <h2 class="fw-bold">Успішно відремонтовано 7,042 машин!</h2>
+      <p>Наша команда професіоналів готова допомогти і вашому авто!</p>
+    </div>
+  </section>
+<!-- Services -->
+<section id="services" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center fw-bold mb-4">
+        <span class="lang-ua">Наші послуги</span>
+        <span class="lang-fr">Nos services</span>
+      </h2>
+      <div class="row g-4">
+        <div class="col-md-4 text-center">
+          <i class="fas fa-cogs fa-3x text-danger mb-3"></i>
+          <h5 class="fw-bold">
+            <span class="lang-ua">Діагностика двигуна</span>
+            <span class="lang-fr">Diagnostic moteur</span>
+          </h5>
+        </div>
+        <div class="col-md-4 text-center">
+          <i class="fas fa-car-crash fa-3x text-danger mb-3"></i>
+          <h5 class="fw-bold">
+            <span class="lang-ua">Ремонт ходової</span>
+            <span class="lang-fr">Réparation du châssis</span>
+          </h5>
+        </div>
+        <div class="col-md-4 text-center">
+          <i class="fas fa-oil-can fa-3x text-danger mb-3"></i>
+          <h5 class="fw-bold">
+            <span class="lang-ua">Заміна мастила та фільтрів</span>
+            <span class="lang-fr">Vidange et filtres</span>
+          </h5>
+        </div>
+        <div class="col-md-4 text-center">
+          <i class="fas fa-car-side fa-3x text-danger mb-3"></i>
+          <h5 class="fw-bold">
+            <span class="lang-ua">Обслуговування гальм</span>
+            <span class="lang-fr">Entretien des freins</span>
+          </h5>
+        </div>
+        <div class="col-md-4 text-center">
+          <i class="fas fa-wrench fa-3x text-danger mb-3"></i>
+          <h5 class="fw-bold">
+            <span class="lang-ua">Кузовні роботи</span>
+            <span class="lang-fr">Travaux de soudure</span>
+          </h5>
+        </div>
+        
+        </div>
+        <div class="col-md-4 text-center mx-auto">
+          <i class="fas fa-sync-alt fa-3x text-danger mb-3"></i>
+          <h5 class="fw-bold">
+            <span class="lang-ua">Заміна зчеплення</span>
+            <span class="lang-fr">Remplacement d’embrayage</span>
+          </h5>
+        </div>
+        <div class="col-md-4 text-center">
+            <i class="fas fa-wrench fa-3x text-danger mb-3"></i>
+            <h5 class="fw-bold">
+              <span class="lang-ua">Ремонт двигуна</span>
+              <span class="lang-fr">Travaux de soudure</span>
+            </h5>
+          </div>
+      </div>
+    </div>
+  </section>
+  
+  <section id="why-us" class="py-5">
+    <div class="container">
+      <h2 class="text-center fw-bold mb-4">
+        <span class="lang-ua">Чому обирають нас</span>
+        <span class="lang-fr">Pourquoi nous choisir</span>
+      </h2>
+      <p>
+        <span class="lang-ua">
+          СТО ProFranceAuto — це не просто автосервіс. Це місце, де ваш автомобіль отримує догляд, якого він заслуговує. Ми спеціалізуємось виключно на автомобілях французьких брендів — Renault, Peugeot, Citroën — і завдяки цьому маємо глибоке розуміння всіх технічних особливостей, слабких місць та нюансів кожної моделі. Наші майстри проходили навчання у сертифікованих центрах, мають багаторічний досвід та постійно вдосконалюють свої навички. Ми використовуємо сучасне діагностичне обладнання, тільки якісні запчастини та витратні матеріали. У нас чесні ціни, прозорі кошториси та повна звітність по кожному етапу роботи. Ми не просто виконуємо ремонт — ми консультуємо, пояснюємо та допомагаємо з прийняттям рішень. Зручне розташування в районі Оболонь, комфортна зона очікування та оперативне обслуговування без черг — усе це створено для вашої зручності. Ми дбаємо про безпеку та довговічність вашого авто так, ніби воно наше власне.
+        </span>
+        <span class="lang-fr">
+          ProFranceAuto n'est pas un simple garage. C'est un atelier où votre voiture bénéficie d’un entretien de qualité supérieure. Spécialisés exclusivement dans les marques françaises Renault, Peugeot et Citroën, nous connaissons parfaitement les caractéristiques techniques, les points faibles et les spécificités de chaque modèle. Nos techniciens sont certifiés, formés dans des centres professionnels et disposent de nombreuses années d’expérience. Nous utilisons un équipement de diagnostic moderne, des pièces de rechange de qualité et des matériaux fiables. Nos prix sont transparents, nos devis honnêtes et chaque étape de la réparation est documentée. En plus de la réparation, nous offrons des conseils clairs pour vous aider à faire les bons choix. Situés à Obolon, nous proposons une zone d’attente confortable, un service rapide sans file d’attente, et une approche humaine. La sécurité et la longévité de votre véhicule sont notre priorité absolue — comme si c’était le nôtre.
+        </span>
+      </p>
+    </div>
+  </section>
+  
+  <!-- Location & Contact -->
+  <section id="location" class="py-5 bg-light">
+    <div class="container">
+<div class="row align-items-center">
+    <div class="col-md-6">
+      <h2 class="fw-bold">
+        <span class="lang-ua">Місцезнаходження</span>
+        <span class="lang-fr">Localisation</span>
+      </h2>
+      <p>
+        <span class="lang-ua">м. Київ, Оболонь, вул. Полярна 19, бокс 3</span>
+        <span class="lang-fr">Kyiv, Obolon, rue Poliarna 19, box 3</span>
+      </p>
+      <h5 class="fw-bold">
+        <span class="lang-ua">Телефон</span>
+        <span class="lang-fr">Téléphone</span>
+      </h5>
+      <p>
+        <a href="tel:+380503311390" class="text-decoration-none">
+          <i class="fas fa-phone-alt me-2"></i>050 331 13 90
+        </a>
+      </p>
+    </div>
+    <div class="col-md-6">
+      <div class="ratio ratio-16x9">
+        <iframe src="https://www.google.com/maps?q=Полярна+19,+Київ&output=embed"
+                style="border:0;" allowfullscreen loading="lazy"></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section>
+
+  <div class="time">
+    <h2> Розклад</h2>
+    <p>Пн-Пт: 9:00 - 18:00</p>
+    <p> Сб-Вс - Вихідні</p>
+  </div>
+</section>
+<!-- Footer -->
+<footer class="bg-primary text-white py-4">
+<div class="container text-center">
+  <p class="mb-2">
+    <span class="lang-ua">© 2025 ProFranceAuto. Всі права захищені.</span>
+    <span class="lang-fr">© 2025 ProFranceAuto. Tous droits réservés.</span>
+  </p>
+  <p class="mb-2">
+    <span class="lang-ua">м. Київ, Оболонь, вул. Полярна 19, бокс 3</span>
+    
+  </p>
+  <p>Пн-Пт: 9:00 - 18:00
+
+    Сб-Вс - Вихідні</p>
+ 
+  <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#callModal">
+    <span class="lang-ua">Замовити дзвінок</span>
+    <span class="lang-fr">Commander un appel</span>
+  </button>
+</div>
+</footer>
+
+<!-- Call Modal -->
+<div class="modal fade" id="callModal" tabindex="-1" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title">
+        <span class="lang-ua">Зателефонувати зараз</span>
+        <span class="lang-fr">Appeler maintenant</span>
+      </h5>
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    <div class="modal-body text-center">
+      <p>
+        <span class="lang-ua">Натисніть нижче, щоб зателефонувати нашому менеджеру:</span>
+        <span class="lang-fr">Cliquez ci-dessous pour appeler meneger :</span>
+      </p>
+      <a href="tel:+380503311390" class="btn btn-danger btn-lg">
+        <span class="lang-ua">Подзвонити</span>
+        <span class="lang-fr">Appeler</span>
+      </a>
+    </div>
+  </div>
+</div>
+</div>
+
+  
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+function switchLang(lang) {
+  document.querySelectorAll('.lang-ua').forEach(el => el.style.display = (lang === 'ua' ? '' : 'none'));
+  document.querySelectorAll('.lang-fr').forEach(el => el.style.display = (lang === 'fr' ? '' : 'none'));
+}
+</script>
+</body>
+</html>
